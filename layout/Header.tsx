@@ -19,8 +19,8 @@ const Header = () => {
               <Pencil className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="font-bold text-lg leading-tight">Trabajos</h1>
-              <p className="text-xs text-muted-foreground leading-tight">Escolares</p>
+              <h1 className="font-bold text-lg leading-tight">AC</h1>
+              <p className="text-xs text-muted-foreground leading-tight">Maquetas</p>
             </div>
           </div>
 
