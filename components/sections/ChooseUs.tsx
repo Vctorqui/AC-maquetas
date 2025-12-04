@@ -37,6 +37,7 @@ const ChooseUs = () => {
           ))}
         </div>
       </div>
+      
     </section>
   )
 }

@@ -1,106 +1,53 @@
-'use client'
-import { Menu, X, Pencil } from 'lucide-react'
-import { useState } from 'react'
+import { MessageCircle, Instagram, Pencil } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { whatsappNumber, instagramAccount } from '@/utils/const'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
   return (
-    <header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
-      <div className='mx-auto max-w-7xl px-4'>
-        <div className='flex h-16 items-center justify-between'>
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Pencil className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-bold text-lg leading-tight">AC</h1>
-              <p className="text-xs text-muted-foreground leading-tight">Maquetas</p>
-            </div>
+    <header className='border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50'>
+      <div className='container mx-auto px-4 py-4 flex items-center justify-between'>
+        <div className='flex items-center gap-2'>
+          <div className='w-10 h-10 bg-primary rounded-lg flex items-center justify-center'>
+            <Pencil className='w-5 h-5 text-primary-foreground' />
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className='hidden md:flex items-center space-x-6'>
-            <a
-              href='#inicio'
-              className='text-sm font-medium transition-colors hover:text-primary'
-            >
-              Inicio
-            </a>
-            <a
-              href='#servicios'
-              className='text-sm font-medium transition-colors hover:text-primary'
-            >
-              Servicios
-            </a>
-            <a
-              href='#precios'
-              className='text-sm font-medium transition-colors hover:text-primary'
-            >
-              Precios
-            </a>
-            <a
-              href='#contacto'
-              className='text-sm font-medium transition-colors hover:text-primary'
-            >
-              Contacto
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className='md:hidden p-2'
-            onClick={toggleMenu}
-            aria-label='Toggle menu'
-          >
-            {isMenuOpen ? (
-              <X className='h-6 w-6' />
-            ) : (
-              <Menu className='h-6 w-6' />
-            )}
-          </button>
+          <div>
+            <h1 className='font-bold text-lg leading-tight'>Trabajos</h1>
+            <p className='text-xs text-muted-foreground leading-tight'>
+              Escolares
+            </p>
+          </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className='md:hidden border-t py-4'>
-            <nav className='flex flex-col space-y-4'>
-              <a
-                href='#inicio'
-                className='text-sm font-medium transition-colors hover:text-primary'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Inicio
-              </a>
-              <a
-                href='#servicios'
-                className='text-sm font-medium transition-colors hover:text-primary'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Servicios
-              </a>
-              <a
-                href='#precios'
-                className='text-sm font-medium transition-colors hover:text-primary'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Precios
-              </a>
-              <a
-                href='#contacto'
-                className='text-sm font-medium transition-colors hover:text-primary'
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contacto
-              </a>
-            </nav>
-          </div>
-        )}
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            size='sm'
+            asChild
+            className='gap-2 bg-transparent'
+          >
+            <a
+              href={`https://instagram.com/${instagramAccount}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Instagram className='w-4 h-4' />
+              <span className='hidden sm:inline'>Instagram</span>
+            </a>
+          </Button>
+          <Button
+            size='sm'
+            className='gap-2 bg-secondary hover:bg-secondary/90'
+            asChild
+          >
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <MessageCircle className='w-4 h-4' />
+              <span className='hidden sm:inline'>WhatsApp</span>
+            </a>
+          </Button>
+        </div>
       </div>
     </header>
   )

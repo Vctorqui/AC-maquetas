@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className='flex flex-col sm:flex-row gap-4'>
             <Button
               size='lg'
-              className='gap-2 bg-secondary hover:bg-secondary/90 text-white'
+              className='gap-2 bg-secondary hover:bg-secondary/90 text-base'
               asChild
             >
               <a
