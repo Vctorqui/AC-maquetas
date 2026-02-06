@@ -28,7 +28,7 @@ const Header = () => {
             variant='outline'
             size='sm'
             asChild
-            className='border-2 border-primary text-primary font-black uppercase tracking-tight hover:bg-primary/5 rounded-none'
+            className='border-2 border-primary text-primary font-black uppercase tracking-tight hover:bg-primary/5 rounded-none shadow-[4px_4px_0px_var(--primary-side)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all'
           >
             <a
               href={`https://instagram.com/${instagramAccount}`}
@@ -45,7 +45,7 @@ const Header = () => {
             asChild
           >
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={`https://wa.me/${whatsappNumber}%20?text=Hola! Me interesa solicitar un trabajo escolar`}
               target='_blank'
               rel='noopener noreferrer'
             >

@@ -31,7 +31,7 @@ const Faq = () => {
                   className='hover:no-underline text-left font-black uppercase text-base py-6 px-6 tracking-tight group data-[state=open]:bg-primary data-[state=open]:text-white transition-colors'
                 >
                   <div className='flex items-center gap-4'>
-                    <div className='w-8 h-8 bg-secondary border-2 border-secondary-side flex items-center justify-center text-white text-xs font-black group-data-[state=open]:bg-white group-data-[state=open]:text-secondary'>
+                    <div className='w-8 h-8 bg-secondary border-2 border-secondary-side flex items-center justify-center text-white text-lg font-black group-data-[state=open]:bg-white group-data-[state=open]:text-secondary'>
                       ?
                     </div>
                     {faq.question}

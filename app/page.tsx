@@ -18,7 +18,7 @@ export default function HomePage() {
       <ChooseUs />
       <Services />
       <Portfolio />
-      {/*<HowWorks /> */}
+      <HowWorks />
       <Testimonials />
       <Faq />
       <Cta />

@@ -65,7 +65,7 @@ const Portfolio = () => {
       <div className='container mx-auto px-4 relative z-10'>
         <div className='text-center mb-20 space-y-4'>
           <h2 className='text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary'>
-            PORTAFOLIO <br />
+            TRABAJOS <br />
             <span
               className='text-white'
               style={{

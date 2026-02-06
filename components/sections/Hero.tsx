@@ -45,14 +45,14 @@ const HeroSection = () => {
               Diseño isométrico aplicado a tu éxito académico.
             </p>
 
-            <div className='flex flex-wrap gap-6'>
+            <div className='flex  flex-wrap gap-6'>
               <Button
                 size='lg'
                 className='h-16 px-10 bg-primary text-white font-black text-xl uppercase tracking-tighter shadow-[8px_8px_0px_var(--primary-side)] active:shadow-none active:translate-x-2 active:translate-y-2 transition-all rounded-none'
                 asChild
               >
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=Hola! Me interesa solicitar un trabajo escolar`}
+                  href={`https://wa.me/${whatsappNumber}?text=Hola! Quiero solicitar información sobre sus trabajos escolares`}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -62,12 +62,14 @@ const HeroSection = () => {
               </Button>
 
               <div className='flex items-center gap-4 bg-white border-4 border-primary p-2 shadow-[6px_6px_0px_var(--primary-side)]'>
-                <div className='flex -space-x-3'>
+                <div className='flex -space-x-2'>
                   {[1, 2, 3].map((i) => (
                     <div
                       key={i}
-                      className='w-10 h-10 border-2 border-primary bg-accent'
-                    />
+                      className='w-12 h-10 border-2 border-primary bg-accent flex items-center justify-center'
+                    >
+                      <CheckCircle className='w-6 h-6 text-primary' />
+                    </div>
                   ))}
                 </div>
                 <div className='pr-4 text-xs font-black uppercase leading-tight'>
@@ -100,7 +102,7 @@ const HeroSection = () => {
 
                 <div className='text-left'>
                   <p className='text-8xl font-black text-primary leading-none'>
-                    500+
+                    100+
                   </p>
                   <p className='text-sm font-black uppercase tracking-widest text-muted-foreground'>
                     Proyectos

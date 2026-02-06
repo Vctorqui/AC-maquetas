@@ -1,7 +1,7 @@
 import { CheckCircle, Clock, Award, Lightbulb } from 'lucide-react'
 
-export const whatsappNumber = ''
-export const instagramAccount = ''
+export const whatsappNumber = '584164659381'
+export const instagramAccount = 'maquetas.pf'
 
 export const features = [
   'Diseños personalizados',
@@ -59,16 +59,19 @@ export const process = [
 
 export const testimonials = [
   {
+    id: 1,
     name: 'María González',
     role: 'Madre de estudiante',
     text: 'Excelente trabajo! La maqueta quedó perfecta y mi hijo sacó la mejor nota. Muy recomendados.',
   },
   {
+    id: 2,
     name: 'Carlos Pérez',
     role: 'Estudiante universitario',
     text: 'Las láminas quedaron increíbles, muy profesionales. El diseño superó mis expectativas.',
   },
   {
+    id: 3,
     name: 'Ana Rodríguez',
     role: 'Profesora',
     text: 'Siempre recomiendo este servicio a mis estudiantes. La calidad y creatividad son excepcionales.',
@@ -78,7 +81,8 @@ export const testimonials = [
 export const portfolio = [
   {
     title: 'Maqueta del Sistema Solar',
-    description: 'Una representación detallada y educativa del sistema solar con planetas a escala y efectos visuales impresionantes.',
+    description:
+      'Una representación detallada y educativa del sistema solar con planetas a escala y efectos visuales impresionantes.',
     category: 'Maqueta',
     level: 'Primaria',
     subject: 'Ciencias Naturales',
@@ -86,7 +90,8 @@ export const portfolio = [
   },
   {
     title: 'Láminas de Historia de Venezuela',
-    description: 'Colección completa de láminas sobre la independencia venezolana con ilustraciones históricas.',
+    description:
+      'Colección completa de láminas sobre la independencia venezolana con ilustraciones históricas.',
     category: 'Láminas',
     level: 'Secundaria',
     subject: 'Historia',
@@ -106,7 +111,8 @@ export const portfolio = [
   },
   {
     title: 'Láminas de Geografía',
-    description: 'Representación visual de los continentes con información detallada sobre cada región.',
+    description:
+      'Representación visual de los continentes con información detallada sobre cada región.',
     category: 'Láminas',
     level: 'Secundaria',
     image: '/placeholder.svg',

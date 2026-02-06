@@ -1,12 +1,24 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export function PencilDecoration({ className = '' }: { className?: string }) {
   return (
-    <svg
+    <motion.svg
       viewBox='0 0 100 100'
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      animate={{
+        y: [0, -10, 0],
+        rotate: [160, 165, 160],
+      }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
     >
       <path
         d='M20 80L30 20L35 18L40 20L50 80L45 82L40 80L35 82L30 80L25 82L20 80Z'
@@ -22,7 +34,7 @@ export function PencilDecoration({ className = '' }: { className?: string }) {
       />
       <rect x='32' y='25' width='6' height='15' fill='oklch(0.45 0.08 280)' />
       <circle cx='35' cy='70' r='3' fill='oklch(0.15 0.02 60)' />
-    </svg>
+    </motion.svg>
   )
 }
 
@@ -134,11 +146,20 @@ export function NotebookDecoration({ className = '' }: { className?: string }) {
 
 export function EraserDecoration({ className = '' }: { className?: string }) {
   return (
-    <svg
+    <motion.svg
       viewBox='0 0 80 60'
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      animate={{
+        x: [0, 15, 0],
+        rotate: [12, 5, 12],
+      }}
+      transition={{
+        duration: 7,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
     >
       <rect
         x='10'
@@ -157,33 +178,33 @@ export function EraserDecoration({ className = '' }: { className?: string }) {
         height='10'
         fill='oklch(0.45 0.08 280 / 0.3)'
       />
-    </svg>
+    </motion.svg>
   )
 }
 
-export function WhatsAppDecoration({ className = '' }: { className?: string }) {
+export function WhatsAppDecoration({
+  className = '',
+  color = '#000000',
+}: {
+  className?: string
+  color?: string
+}) {
   return (
     <svg
-      viewBox='0 0 24 24'
-      className={className}
-      fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      color='#000000'
+      fill='none'
+      className={className}
+      color={color}
+      viewBox='0 0 24 24'
     >
       <path
-        d='M22 12C22 17.5228 17.5228 22 12 22C10.1786 22 8.47087 21.513 7 20.6622L2 21.5L2.83209 16C2.29689 14.7751 2 13.4222 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z'
-        stroke='#000000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      ></path>
+        d='M22 12c0 5.523-4.477 10-10 10a9.96 9.96 0 0 1-5-1.338L2 21.5l.832-5.5A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10'
+        stroke={color}
+      />
       <path
-        d='M12.9604 13.8683L15.0399 13.4624L17 14.2149V16.0385C17 16.6449 16.4783 17.1073 15.8901 16.9783C14.3671 16.6444 11.5997 15.8043 9.67826 13.8683C7.84859 12.0248 7.22267 9.45734 7.01039 8.04128C6.92535 7.47406 7.3737 7 7.94306 7H9.83707L10.572 8.96888L10.1832 11.0701'
-        stroke='#000000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      ></path>
+        d='m12.96 13.868 2.08-.406 1.96.753v1.823c0 .607-.522 1.07-1.11.94-1.523-.334-4.29-1.174-6.212-3.11-1.83-1.843-2.455-4.41-2.668-5.827C6.925 7.474 7.374 7 7.943 7h1.894l.735 1.969-.389 2.101'
+        stroke={color}
+      />
     </svg>
   )
 }
@@ -197,5 +218,218 @@ export function ACLogo({ className = '' }: { className?: string }) {
       height={100}
       className={className}
     />
+  )
+}
+
+export function PencilRuler({ className = '' }: { className?: string }) {
+  return (
+    <motion.svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
+      className={`lucide lucide-pencil-ruler-icon lucide-pencil-ruler ${className}`}
+      viewBox='0 0 24 24'
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+    >
+      <motion.path
+        d='M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13m1-7 2-2m8 12 2-2m-3-3 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497zM15 5l4 4'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 1.5, ease: 'easeInOut' },
+          },
+        }}
+      />
+    </motion.svg>
+  )
+}
+
+export function PackageCheck({ className = '' }: { className?: string }) {
+  return (
+    <motion.svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className={`lucide lucide-package-check-icon lucide-package-check ${className}`}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+    >
+      <motion.path
+        d='m16 16 2 2 4-4'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 1 },
+          },
+        }}
+      />
+      <motion.path
+        d='M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 1, ease: 'easeInOut' },
+          },
+        }}
+      />
+      <motion.path
+        d='m7.5 4.27 9 5.15'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.5 },
+          },
+        }}
+      />
+      <motion.polyline
+        points='3.29 7 12 12 20.71 7'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 0.8, delay: 0.3 },
+          },
+        }}
+      />
+      <motion.line
+        x1='12'
+        x2='12'
+        y1='22'
+        y2='12'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.8 },
+          },
+        }}
+      />
+    </motion.svg>
+  )
+}
+
+export function DesignPencil({ className = '' }: { className?: string }) {
+  return (
+    <motion.svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className={`lucide lucide-design-pencil-icon lucide-design-pencil ${className}`}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+    >
+      <motion.path
+        d='M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 1.5, ease: 'easeInOut' },
+          },
+        }}
+      />
+      <motion.path
+        d='M8 21.1679V14L12 7L16 14V21.1679'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 1, delay: 0.5 },
+          },
+        }}
+      />
+      <motion.path
+        d='M8 14C8 14 9.12676 15 10 15C10.8732 15 12 14 12 14C12 14 13.1268 15 14 15C14.8732 15 16 14 16 14'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 0.8, delay: 1 },
+          },
+        }}
+      />
+    </motion.svg>
+  )
+}
+
+export function Smartphone({ className = '' }: { className?: string }) {
+  return (
+    <motion.svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className={`lucide lucide-smartphone-icon lucide-smartphone ${className}`}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+    >
+      <motion.rect
+        width='14'
+        height='20'
+        x='5'
+        y='2'
+        rx='2'
+        ry='2'
+        variants={{
+          hidden: { pathLength: 0, opacity: 0 },
+          visible: {
+            pathLength: 1,
+            opacity: 1,
+            transition: { duration: 1.5, ease: 'easeInOut' },
+          },
+        }}
+      />
+      <motion.path
+        d='M12 18h.01'
+        variants={{
+          hidden: { scale: 0, opacity: 0 },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: { delay: 1, duration: 0.3 },
+          },
+        }}
+      />
+    </motion.svg>
   )
 }

@@ -5,7 +5,7 @@ import { whatsappNumber } from '@/utils/const'
 const WhatsAppFloat = () => {
   return (
     <a
-      href={`https://wa.me/${whatsappNumber}?text=Hola! Me interesa solicitar un trabajo escolar`}
+      href={`https://wa.me/${whatsappNumber}?text=Hola! Quiero solicitar información sobre sus trabajos escolares`}
       target='_blank'
       rel='noopener noreferrer'
       className='fixed bottom-8 right-8 z-50 group'
@@ -25,7 +25,7 @@ const WhatsAppFloat = () => {
 
       {/* Tooltip technical block */}
       <span className='absolute bottom-full right-0 mb-4 bg-primary text-white text-[10px] font-black uppercase px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border-b-2 border-r-2 border-primary shadow-[2px_2px_0px_var(--secondary)]'>
-        CONEXIÓN_DIRECTA
+        CONEXIÓN DIRECTA
       </span>
     </a>
   )

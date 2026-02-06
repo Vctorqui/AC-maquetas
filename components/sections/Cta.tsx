@@ -42,7 +42,7 @@ const Cta = () => {
               <Button
                 size='lg'
                 variant='outline'
-                className='h-20 px-12 bg-white border-4 border-primary-side text-primary font-black text-xl uppercase tracking-tighter shadow-[10px_10px_0px_rgba(0,0,0,0.1)] hover:bg-white/90 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all rounded-none'
+                className='h-20 px-12 bg-white border-4 border-primary-side text-primary font-black text-xl uppercase tracking-tighter shadow-[10px_10px_0px_rgba(249,249,249,0.5)] hover:bg-white/90 active:shadow-none active:translate-x-2 active:translate-y-2 transition-all rounded-none'
                 asChild
               >
                 <a

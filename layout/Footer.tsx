@@ -1,6 +1,6 @@
-import { Pencil } from 'lucide-react'
+import { Instagram, Pencil } from 'lucide-react'
 import { instagramAccount, whatsappNumber } from '@/utils/const'
-import { ACLogo } from '@/components/shared/CustomIcons'
+import { ACLogo, WhatsAppDecoration } from '@/components/shared/CustomIcons'
 
 const Footer = () => {
   return (
@@ -25,16 +25,16 @@ const Footer = () => {
 
           <div className='flex flex-wrap justify-center items-center gap-10'>
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={`https://wa.me/${whatsappNumber}%20?text=Hola! Me interesa solicitar un trabajo escolar`}
               target='_blank'
               rel='noopener noreferrer'
               className='group flex items-center gap-2'
             >
               <div className='w-8 h-8 border-2 border-primary flex items-center justify-center font-black group-hover:bg-primary group-hover:text-white transition-colors'>
-                W
+                <WhatsAppDecoration className='w-4 h-4' />
               </div>
               <span className='text-xs font-black uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors'>
-                (58) 412-0128332
+                +58 416 465 9381
               </span>
             </a>
 
@@ -45,7 +45,7 @@ const Footer = () => {
               className='group flex items-center gap-2'
             >
               <div className='w-8 h-8 border-2 border-secondary flex items-center justify-center font-black group-hover:bg-secondary group-hover:text-white transition-colors'>
-                I
+                <Instagram className='w-4 h-4' />
               </div>
               <span className='text-xs font-black uppercase tracking-widest text-muted-foreground group-hover:text-secondary transition-colors'>
                 @{instagramAccount}
@@ -55,8 +55,8 @@ const Footer = () => {
         </div>
 
         <div className='mt-16 pt-8 border-t-2 border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4'>
-          <p className='text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground'>
-            © {new Date().getFullYear()} Trabajos Escolares. Todos los derechos
+          <p className='text-[10px] font-black uppercase tracking-widest text-muted-foreground'>
+            © {new Date().getFullYear()} AC Maquetas. Todos los derechos
             reservados.
           </p>
           <div className='flex gap-4'>
