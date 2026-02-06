@@ -1,46 +1,69 @@
 import { Pencil } from 'lucide-react'
 import { instagramAccount, whatsappNumber } from '@/utils/const'
+import { ACLogo } from '@/components/shared/CustomIcons'
 
 const Footer = () => {
   return (
-    <footer className=' border-t bg-card/50 py-8 relative'>
-      <div className='container mx-auto max-w-7xl px-4'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-          <div className='flex items-center gap-2'>
-            <div className='w-8 h-8 bg-primary rounded-lg flex items-center justify-center'>
-              <Pencil className='w-4 h-4 text-primary-foreground' />
+    <footer className='border-t-8 border-primary-side bg-background py-16 relative overflow-hidden'>
+      <div className='absolute inset-0 bg-iso-grid opacity-5 pointer-events-none' />
+
+      <div className='container mx-auto max-w-7xl px-4 relative z-10'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-10'>
+          <div className='flex items-center gap-4'>
+            <div className='w-12 h-12 bg-white flex items-center justify-center transform -rotate-12 long-shadow-blue'>
+              <ACLogo className='w-12 h-12' />
             </div>
             <div>
-              <p className='font-semibold text-sm'>Trabajos Escolares</p>
-              <p className='text-xs text-muted-foreground'>
-                Excelencia y creatividad
+              <p className='font-black text-lg uppercase tracking-tighter text-primary'>
+                AC MAQUETAS
+              </p>
+              <p className='text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]'>
+                Adnan Chleiwit
               </p>
             </div>
           </div>
-          <div className='flex items-center gap-6'>
+
+          <div className='flex flex-wrap justify-center items-center gap-10'>
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-sm text-muted-foreground hover:text-foreground transition-colors'
+              className='group flex items-center gap-2'
             >
-              (58) 412-0128332
+              <div className='w-8 h-8 border-2 border-primary flex items-center justify-center font-black group-hover:bg-primary group-hover:text-white transition-colors'>
+                W
+              </div>
+              <span className='text-xs font-black uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors'>
+                (58) 412-0128332
+              </span>
             </a>
+
             <a
               href={`https://instagram.com/${instagramAccount}`}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-sm text-muted-foreground hover:text-foreground transition-colors'
+              className='group flex items-center gap-2'
             >
-              @{instagramAccount}
+              <div className='w-8 h-8 border-2 border-secondary flex items-center justify-center font-black group-hover:bg-secondary group-hover:text-white transition-colors'>
+                I
+              </div>
+              <span className='text-xs font-black uppercase tracking-widest text-muted-foreground group-hover:text-secondary transition-colors'>
+                @{instagramAccount}
+              </span>
             </a>
           </div>
         </div>
-        <div className='mt-6 pt-6 border-t text-center'>
-          <p className='text-xs text-muted-foreground'>
+
+        <div className='mt-16 pt-8 border-t-2 border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4'>
+          <p className='text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground'>
             © {new Date().getFullYear()} Trabajos Escolares. Todos los derechos
             reservados.
           </p>
+          <div className='flex gap-4'>
+            <div className='w-4 h-4 bg-primary/20' />
+            <div className='w-4 h-4 bg-secondary/20' />
+            <div className='w-4 h-4 bg-accent/20' />
+          </div>
         </div>
       </div>
     </footer>

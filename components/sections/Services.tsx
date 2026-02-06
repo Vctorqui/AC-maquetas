@@ -1,9 +1,7 @@
 'use client'
 
-
 import { services } from '@/utils/services/services.const'
 import { PencilDecoration, RulerDecoration } from '../shared/CustomIcons'
-import { Card, CardContent } from '../ui/card'
 import { Package } from 'lucide-react'
 import { useState } from 'react'
 import { ServiceGalleryModal } from '../shared/GalleryModal'
@@ -13,40 +11,55 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   return (
-    <section className='py-16 md:py-24 relative'>
+    <section className='py-16 md:py-32 relative overflow-hidden bg-background'>
       <PencilDecoration className='absolute top-20 left-5 w-12 h-12 opacity-15 -rotate-12 hidden md:block' />
       <RulerDecoration className='absolute top-1/2 right-5 w-28 h-7 opacity-15 rotate-90 hidden md:block' />
 
       <div className='container mx-auto px-4 relative z-10'>
-        <div className='text-center mb-12 space-y-4'>
-          <h2 className='text-3xl md:text-4xl font-bold text-balance'>
-            Nuestros Servicios
+        <div className='text-center mb-20 space-y-4'>
+          <h2 className='text-4xl md:text-5xl font-black uppercase tracking-tighter text-primary'>
+            NUESTROS{' '}
+            <span
+              className='text-secondary'
+              style={{ textShadow: '4px 4px 0px var(--secondary-side)' }}
+            >
+              SERVICIOS
+            </span>
           </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto text-pretty'>
-            Ofrecemos una amplia variedad de trabajos escolares personalizados
-            para todos los niveles educativos
-          </p>
+          <div className='w-24 h-2 bg-primary mx-auto' />
         </div>
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 perspective-container'>
           {services.map((service) => (
-            <Card
+            <div
               key={service.name}
               onClick={() => setSelectedService(service.name)}
-              className='hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer group'
+              className='group relative bg-white border-4 border-primary p-8 pt-12 shadow-[8px_8px_0px_var(--primary-side)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[16px_16px_0px_var(--primary-side)] transition-all cursor-pointer'
             >
-              <CardContent className='p-6 space-y-3'>
-                <div className='w-12 h-12 bg-accent rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors'>
-                  <Package className='w-6 h-6 text-accent-foreground group-hover:text-primary-foreground' />
+              {/* Box Lid Effect */}
+              <div className='absolute top-0 left-0 w-full h-4 bg-primary-top opacity-50' />
+
+              <div className='w-16 h-16 bg-secondary flex items-center justify-center mb-6 long-shadow-orange transform group-hover:scale-110 transition-transform'>
+                <Package className='w-8 h-8 text-white' />
+              </div>
+
+              <h3 className='font-black text-xl uppercase tracking-tighter text-primary mb-3'>
+                {service.name}
+              </h3>
+
+              <p className='text-sm font-bold text-muted-foreground leading-snug mb-6'>
+                {service.description}
+              </p>
+
+              <div className='flex items-center gap-2 group/btn'>
+                <div className='w-6 h-6 border-2 border-secondary bg-transparent flex items-center justify-center font-black text-secondary text-[10px]'>
+                  →
                 </div>
-                <h3 className='font-bold text-lg'>{service.name}</h3>
-                <p className='text-sm text-muted-foreground text-pretty'>
-                  {service.description}
-                </p>
-                <p className='text-xs text-primary font-medium'>
-                  Click para ver galería →
-                </p>
-              </CardContent>
-            </Card>
+                <span className='text-[10px] font-black uppercase tracking-widest text-secondary group-hover/btn:underline'>
+                  Ver Galería
+                </span>
+              </div>
+            </div>
           ))}
         </div>
       </div>

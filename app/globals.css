@@ -1,35 +1,52 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme for school projects business - warm yellows, educational feel */
-  --background: oklch(0.98 0.01 85);
-  --foreground: oklch(0.15 0.02 60);
+  /* Modern Isometric - Option 3 - Based on AC Maquetas Logo */
+  /* Focus: Depth, Perspective, and 3D forms */
+
+  --background: oklch(0.96 0.01 240); /* #ECF0F1 equivalent gray-blue tint */
+  --foreground: oklch(0.2 0.05 240); /* Dark blue #0F3D5C text */
+
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 60);
+  --card-foreground: oklch(0.2 0.05 240);
+
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 60);
-  --primary: oklch(0.85 0.12 85);
-  --primary-foreground: oklch(0.15 0.02 60);
-  --secondary: oklch(0.45 0.08 280);
-  --secondary-foreground: oklch(0.98 0.01 85);
-  --muted: oklch(0.95 0.01 85);
-  --muted-foreground: oklch(0.45 0.02 60);
-  --accent: oklch(0.92 0.08 85);
-  --accent-foreground: oklch(0.15 0.02 60);
+  --popover-foreground: oklch(0.2 0.05 240);
+
+  /* Primary Blue - Isometric Faces */
+  --primary: oklch(0.42 0.1 240); /* #1B5A8E Front Face */
+  --primary-foreground: oklch(1 0 0);
+  --primary-side: oklch(0.28 0.08 240); /* #0F3D5C Side Face (Darker) */
+  --primary-top: oklch(0.55 0.12 240); /* #2E7AB8 Top Face (Lighter) */
+
+  /* Secondary Orange - Isometric Highlights */
+  --secondary: oklch(0.68 0.15 55); /* #F39C12 Front Face */
+  --secondary-foreground: oklch(1 0 0);
+  --secondary-side: oklch(0.58 0.16 50); /* #E67E22 Side Face (Darker) */
+  --secondary-top: oklch(0.75 0.14 60); /* Lighter Orange Top */
+
+  /* Accent Highlight */
+  --accent: oklch(0.82 0.13 85); /* #F4D03F Yellow */
+  --accent-foreground: oklch(0.2 0.05 240);
+
+  --muted: oklch(0.92 0.01 240);
+  --muted-foreground: oklch(0.45 0.05 240);
+
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.02 85);
-  --input: oklch(0.92 0.02 85);
-  --ring: oklch(0.85 0.12 85);
-  --chart-1: oklch(0.85 0.12 85);
-  --chart-2: oklch(0.45 0.08 280);
-  --chart-3: oklch(0.65 0.15 45);
-  --chart-4: oklch(0.55 0.18 180);
-  --chart-5: oklch(0.75 0.1 120);
-  --radius: 0.75rem;
+
+  --border: oklch(0.88 0.02 240);
+  --input: oklch(0.92 0.02 240);
+  --ring: oklch(0.42 0.1 240);
+
+  --chart-1: oklch(0.42 0.1 240);
+  --chart-2: oklch(0.68 0.15 55);
+  --chart-3: oklch(0.82 0.13 85);
+  --radius: 0.5rem; /* Sharper geometric radius for isometric feel */
+
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -125,7 +142,8 @@
   }
 
   .bg-grid-pattern {
-    background-image: linear-gradient(to right, oklch(0.88 0.02 85) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, oklch(0.88 0.02 85) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(0.88 0.02 85) 1px, transparent 1px);
     background-size: 20px 20px;
   }
@@ -138,5 +156,133 @@
       oklch(0.75 0.08 280 / 0.15) 30px
     );
     background-size: 100% 30px;
+  }
+
+  /* Isometric Design Utilities - Option 3 */
+  .isometric-view {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+  }
+
+  .perspective-container {
+    perspective: 1000px;
+  }
+
+  .iso-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .iso-card:hover {
+    transform: translateY(-10px);
+  }
+
+  /* Long Shadow utility */
+  .long-shadow-blue {
+    box-shadow:
+      1px 1px var(--primary-side),
+      2px 2px var(--primary-side),
+      3px 3px var(--primary-side),
+      4px 4px var(--primary-side),
+      8px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .long-shadow-orange {
+    box-shadow:
+      1px 1px var(--secondary-side),
+      2px 2px var(--secondary-side),
+      3px 3px var(--secondary-side),
+      4px 4px var(--secondary-side),
+      8px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* 3D Button Style */
+  .btn-3d {
+    position: relative;
+    background: var(--primary);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 5px 0 var(--primary-side);
+    transition: all 0.1s;
+  }
+
+  .btn-3d:active {
+    box-shadow: 0 0 0 var(--primary-side);
+    transform: translateY(5px);
+  }
+
+  .btn-3d-secondary {
+    position: relative;
+    background: var(--secondary);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 5px 0 var(--secondary-side);
+    transition: all 0.1s;
+  }
+
+  /* Decorative Isometric Grid background */
+  .bg-iso-grid {
+    background-image:
+      linear-gradient(
+        30deg,
+        var(--border) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        var(--border) 87.5%,
+        var(--border)
+      ),
+      linear-gradient(
+        150deg,
+        var(--border) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        var(--border) 87.5%,
+        var(--border)
+      ),
+      linear-gradient(
+        30deg,
+        var(--border) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        var(--border) 87.5%,
+        var(--border)
+      ),
+      linear-gradient(
+        150deg,
+        var(--border) 12%,
+        transparent 12.5%,
+        transparent 87%,
+        var(--border) 87.5%,
+        var(--border)
+      ),
+      linear-gradient(
+        60deg,
+        var(--border) 25%,
+        transparent 25.5%,
+        transparent 75%,
+        var(--border) 75.5%,
+        var(--border)
+      ),
+      linear-gradient(
+        60deg,
+        var(--border) 25%,
+        transparent 25.5%,
+        transparent 75%,
+        var(--border) 75.5%,
+        var(--border)
+      );
+    background-size: 80px 140px;
+    background-position:
+      0 0,
+      0 0,
+      40px 70px,
+      40px 70px,
+      0 0,
+      40px 70px;
   }
 }

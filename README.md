@@ -1,171 +1,107 @@
-# 📚 Trabajos Escolares - Landing Page
+# 📐 AC MAQUETAS - Adnan Chleiwit
 
-Landing page profesional para servicios de trabajos escolares personalizados, diseñada con Next.js 15, React 19, TypeScript y Tailwind CSS.
+Landing page técnica y profesional para **AC MAQUETAS (Adnan Chleiwit)**, especializada en la creación de maquetas, láminas y proyectos escolares de alto nivel. Implementada con un estilo **Moderno Isométrico** único.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black)
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.9-38bdf8)
 
+## 🧊 Sistema de Diseño: Moderno Isométrico
+
+Esta landing page destaca por su arquitectura visual basada en la profundidad y la geometría:
+
+- **Perspectiva 3D**: Uso de transformaciones CSS para simular planos isométricos reales.
+- **Long Shadows**: Sombras sólidas y técnicas que refuerzan la sensación de volumen y fisicalidad.
+- **Grid de Ingeniería**: Fondo de rejilla isométrica (`bg-iso-grid`) que evoca planos de diseño.
+- **Estética Industrial**: Bordes gruesos (8px), tipografía técnica en mayúsculas y acabado "blocky".
+
 ## 🌟 Características
 
-- ✨ **Diseño moderno y responsivo** - Optimizado para todos los dispositivos
-- 🎨 **UI/UX profesional** - Componentes de Radix UI y shadcn/ui
-- 🚀 **Rendimiento optimizado** - App Router de Next.js 15
-- 📱 **WhatsApp flotante** - Botón de contacto directo siempre visible
-- 🖼️ **Galería de servicios** - Modales interactivos con imágenes
-- 💬 **Testimonios** - Reseñas de clientes satisfechos
-- ❓ **FAQ interactivo** - Preguntas frecuentes con acordeón
-- 📊 **Portfolio dinámico** - Showcase de proyectos realizados
-- 🎯 **CTA estratégicos** - Llamados a la acción optimizados para conversión
+- ✨ **Interfaz 3D Dinámica** - Elementos que reaccionan al hover con efectos de presión y profundidad.
+- 🎨 **Paleta de Marca** - Basada estrictamente en la identidad de AC Maquetas (Azul #1B5A8E y Naranja #F39C12).
+- 🚀 **Rendimiento de Próxima Generación** - Construido sobre Next.js 15 y React 19.
+- 🖼️ **Galería Técnica** - Visualizador de fotos con bordes industriales y nomenclaturas de vista.
+- 📱 **WhatsApp 3D** - Botón flotante transformado en un bloque sólido persistente.
+- 💬 **Testimonios en Bloques** - Reseñas estilizadas como módulos de construcción.
 
 ## 🛠️ Tecnologías
 
 ### Core
-- **[Next.js 15](https://nextjs.org/)** - Framework de React con App Router
-- **[React 19](https://react.dev/)** - Biblioteca de UI
-- **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático
-- **[Tailwind CSS 4](https://tailwindcss.com/)** - Framework de CSS utility-first
 
-### UI Components
-- **[Radix UI](https://www.radix-ui.com/)** - Componentes accesibles sin estilos
-- **[shadcn/ui](https://ui.shadcn.com/)** - Componentes reutilizables
-- **[Lucide React](https://lucide.dev/)** - Iconos modernos
+- **[Next.js 15](https://nextjs.org/)** - App Router y Server Components.
+- **[React 19](https://react.dev/)** - Últimas características de concurrencia.
+- **[TypeScript](https://www.typescriptlang.org/)** - Desarrollo robusto y tipado.
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Estilizado moderno con variables dinámicas.
+
+### UI & UX
+
+- **[Lucide React](https://lucide.dev/)** - Iconografía técnica.
+- **Framer Motion (opcional)** - Micro-interacciones (si se incluyen).
+- **Custom Isometric Engine** - Utilidades personalizadas en `globals.css` para CSS 3D.
 
 ## 📁 Estructura del Proyecto
 
 ```
-school-projects-website/
-├── app/                      # App Router de Next.js
-│   ├── page.tsx             # Página principal
-│   ├── layout.tsx           # Layout raíz
-│   └── globals.css          # Estilos globales
-├── components/              # Componentes React
-│   ├── sections/            # Secciones de la landing
-│   │   ├── Hero.tsx         # Hero section
-│   │   ├── Services.tsx     # Servicios ofrecidos
-│   │   ├── Portfolio.tsx    # Galería de trabajos
-│   │   ├── ChooseUs.tsx     # Por qué elegirnos
-│   │   ├── HowWorks.tsx     # Cómo funciona el proceso
-│   │   ├── Testimonials.tsx # Testimonios de clientes
-│   │   ├── Faq.tsx          # Preguntas frecuentes
-│   │   └── Cta.tsx          # Call to action
-│   ├── shared/              # Componentes compartidos
-│   │   ├── WhatsAppFloat.tsx # Botón flotante de WhatsApp
-│   │   ├── GalleryModal.tsx  # Modal de galería
-│   │   └── CustomIcons.tsx   # Iconos personalizados
-│   └── ui/                  # Componentes base (shadcn)
-├── layout/                  # Layouts de la aplicación
-│   ├── PublicLayout.tsx     # Layout público principal
-│   ├── Header.tsx           # Encabezado/navegación
-│   └── Footer.tsx           # Pie de página
-├── utils/                   # Utilidades y constantes
-│   ├── const.ts             # Constantes generales
-│   ├── services/            # Datos de servicios
-│   └── gallery/             # Datos de galerías
-├── lib/                     # Configuraciones de librerías
-├── hooks/                   # Custom hooks
-├── styles/                  # Estilos adicionales
-└── public/                  # Archivos estáticos
-
+AC-maquetas/
+├── app/                      # Configuración de rutas y estilos globales
+│   ├── globals.css          # Core del diseño isométrico (Variables 3D)
+│   └── page.tsx             # Composición de la landing
+├── components/              # Arquitectura de componentes
+│   ├── sections/            # Bloques principales (Hero, Portfolio, etc.)
+│   ├── shared/              # Elementos reutilizables (Gallery, WhatsApp)
+│   └── ui/                  # Componentes base (shadcn/ui adaptados)
+├── layout/                  # Estructura de Header y Footer 3D
+├── public/                  # Assets, incluyendo ac-logo.svg
+└── utils/                   # Datos estáticos y constantes de marca
 ```
 
 ## 🚀 Instalación y Uso
 
 ### Prerrequisitos
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (recomendado), npm o yarn
 
 ### Instalación
 
 1. Clona el repositorio:
+
 ```bash
 git clone <repository-url>
-cd school-projects-website
+cd AC-maquetas
 ```
 
 2. Instala las dependencias:
+
 ```bash
 pnpm install
-# o
-npm install
-# o
-yarn install
 ```
 
-3. Ejecuta el servidor de desarrollo:
+3. Ejecuta en desarrollo:
+
 ```bash
 pnpm dev
-# o
-npm run dev
-# o
-yarn dev
 ```
 
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
+## 📦 Componentes Destacados
 
-## 📝 Scripts Disponibles
+### Header 3D
 
-```bash
-pnpm dev      # Inicia el servidor de desarrollo
-pnpm build    # Construye la aplicación para producción
-pnpm start    # Inicia el servidor de producción
-pnpm lint     # Ejecuta el linter
-```
+Módulo geométrico con el logo de AC Maquetas integrado en un bloque físico con sombras proyectadas.
 
-## ⚙️ Configuración
+### Hero Perspective
 
-### Personalizar Contenido
+Uso de `perspective-container` y `isometric-view` para presentar estadísticas en un plano inclinado real.
 
-Edita los archivos de constantes en `utils/`:
+### Portfolio Industrial
 
-- **`utils/const.ts`** - Información general, testimonios, portfolio
-- **`utils/services/services.const.ts`** - Servicios ofrecidos
-- **`utils/gallery/gallery.const.ts`** - Galerías de imágenes
+Galería con bordes de 8px y overlays técnicos que revelan detalles del proyecto al pasar el cursor.
 
+### CTA Masivo
 
-## 🎨 Personalización de Estilos
-
-Los estilos se pueden personalizar en:
-- `app/globals.css` - Variables CSS y estilos globales
-- `tailwind.config.ts` - Configuración de Tailwind CSS
-
-## 📦 Componentes Principales
-
-### Hero Section
-Sección principal con CTA y estadísticas destacadas.
-
-### Services
-Grid de servicios con modales de galería interactivos.
-
-### Portfolio
-Galería de proyectos realizados con descripciones detalladas.
-
-### Testimonials
-Tarjetas de testimonios de clientes satisfechos.
-
-### FAQ
-Acordeón interactivo con preguntas frecuentes.
-
-### WhatsApp Float
-Botón flotante siempre visible para contacto directo.
-
-## 🌐 Despliegue
-
-### Vercel (Recomendado)
-
-1. Sube tu código a GitHub
-2. Importa el proyecto en [Vercel](https://vercel.com)
-3. Despliega automáticamente
-
-## 📄 Licencia
-
-Este proyecto es privado. Todos los derechos reservados © 2025 Victor Quiñones.
+Bloque de alto impacto con tipografía técnica y botones escalados que simulan una pulsación mecánica.
 
 ## 👨‍💻 Autor
 
-**Victor Quiñones**
-
-Hecho con ❤️ usando Next.js y React
-
+Desarrollado por [Mi](https://github.com/Vctorqui) para elevar la presencia digital de **AC Maquetas**.

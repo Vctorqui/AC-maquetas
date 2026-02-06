@@ -1,13 +1,14 @@
-
+import dynamic from 'next/dynamic'
 import PublicLayout from '@/layout/PublicLayout'
 import HeroSection from '@/components/sections/Hero'
-import Services from '@/components/sections/Services'
 import ChooseUs from '@/components/sections/ChooseUs'
-import Portfolio from '@/components/sections/Portfolio'
-import HowWorks from '@/components/sections/HowWorks'
-import Testimonials from '@/components/sections/Testimonials'
-import Faq from '@/components/sections/Faq'
-import Cta from '@/components/sections/Cta'
+
+const Services = dynamic(() => import('@/components/sections/Services'))
+const Portfolio = dynamic(() => import('@/components/sections/Portfolio'))
+const HowWorks = dynamic(() => import('@/components/sections/HowWorks'))
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'))
+const Faq = dynamic(() => import('@/components/sections/Faq'))
+const Cta = dynamic(() => import('@/components/sections/Cta'))
 
 export default function HomePage() {
   return (
@@ -17,7 +18,7 @@ export default function HomePage() {
       <ChooseUs />
       <Services />
       <Portfolio />
-      <HowWorks />
+      {/*<HowWorks /> */}
       <Testimonials />
       <Faq />
       <Cta />
