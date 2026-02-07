@@ -34,6 +34,7 @@ const Header = () => {
               href={`https://instagram.com/${instagramAccount}`}
               target='_blank'
               rel='noopener noreferrer'
+              title='Ver nuestro portafolio en Instagram'
             >
               <Instagram className='w-4 h-4' />
               <span className='hidden sm:inline'>Portfolio</span>
@@ -48,6 +49,7 @@ const Header = () => {
               href={`https://wa.me/${whatsappNumber}%20?text=Hola! Me interesa solicitar un trabajo escolar`}
               target='_blank'
               rel='noopener noreferrer'
+              title='Contáctanos por WhatsApp'
             >
               <WhatsAppDecoration className='w-4 h-4' />
               <span className='hidden sm:inline'>Contacto</span>

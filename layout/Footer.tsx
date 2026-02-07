@@ -28,6 +28,7 @@ const Footer = () => {
               href={`https://wa.me/${whatsappNumber}%20?text=Hola! Me interesa solicitar un trabajo escolar`}
               target='_blank'
               rel='noopener noreferrer'
+              title='Escríbenos por WhatsApp'
               className='group flex items-center gap-2'
             >
               <div className='w-8 h-8 border-2 border-primary flex items-center justify-center font-black group-hover:bg-primary group-hover:text-white transition-colors'>
@@ -42,6 +43,7 @@ const Footer = () => {
               href={`https://instagram.com/${instagramAccount}`}
               target='_blank'
               rel='noopener noreferrer'
+              title='Síguenos en Instagram'
               className='group flex items-center gap-2'
             >
               <div className='w-8 h-8 border-2 border-secondary flex items-center justify-center font-black group-hover:bg-secondary group-hover:text-white transition-colors'>
@@ -55,10 +57,24 @@ const Footer = () => {
         </div>
 
         <div className='mt-16 pt-8 border-t-2 border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4'>
-          <p className='text-[10px] font-black uppercase tracking-widest text-muted-foreground'>
-            © {new Date().getFullYear()} AC Maquetas. Todos los derechos
-            reservados.
-          </p>
+          <div className='flex flex-col items-center md:items-start gap-1'>
+            <p className='text-[10px] font-black uppercase tracking-widest text-muted-foreground'>
+              © {new Date().getFullYear()} AC Maquetas. Todos los derechos
+              reservados.
+            </p>
+            <p className='text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/60 transition-colors hover:text-primary'>
+              Desarrollado por{' '}
+              <a
+                href='https://victorqui.dev'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-all'
+                title='Visitar el sitio web de Victor Quiñones'
+              >
+                Victor Quiñones
+              </a>
+            </p>
+          </div>
           <div className='flex gap-4'>
             <div className='w-4 h-4 bg-primary/20' />
             <div className='w-4 h-4 bg-secondary/20' />

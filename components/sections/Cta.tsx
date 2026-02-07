@@ -33,6 +33,7 @@ const Cta = () => {
                   href={`https://wa.me/${whatsappNumber}?text=Hola! Quiero solicitar información sobre sus trabajos escolares`}
                   target='_blank'
                   rel='noopener noreferrer'
+                  title='Contactar por WhatsApp para asesoría inmediata'
                 >
                   <MessageCircle className='w-7 h-7 mr-3' />
                   WhatsApp
@@ -49,6 +50,7 @@ const Cta = () => {
                   href={`https://instagram.com/${instagramAccount}`}
                   target='_blank'
                   rel='noopener noreferrer'
+                  title='Ver más de nuestro trabajo en Instagram'
                 >
                   <Instagram className='w-7 h-7 mr-3' />
                   Instagram

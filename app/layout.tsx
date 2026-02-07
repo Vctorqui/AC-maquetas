@@ -7,22 +7,48 @@ import { Suspense } from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Trabajos Escolares - Maquetas, Láminas y Más',
+  title:
+    'AC Maquetas | Trabajos Escolares, Maquetas y Láminas Personalizadas en Venezuela',
   description:
-    'Diseños y trabajos escolares personalizados. Maquetas, láminas, portadas, trípticos, dípticos, lapbooks, carteleras y birretes. Excelencia, creatividad y perfección.',
+    'Expertos en la creación de maquetas escolares, láminas educativas y proyectos estudiantiles en Venezuela. Creatividad, calidad y puntualidad para tus tareas escolares.',
+  keywords: [
+    'maquetas escolares venezuela',
+    'trabajos escolares caracas',
+    'proyectos escolares personalizados',
+    'láminas educativas',
+    'trípticos escolares',
+    'birretes personalizados',
+    'AC Maquetas',
+    'diseño de tareas escolares',
+  ],
+  alternates: {
+    canonical: 'https://acmaquetas.lat',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Trabajos Escolares - Maquetas, Láminas y Más',
+    title: 'AC Maquetas | Excelencia en Trabajos Escolares y Maquetas',
     description:
-      'Diseños y trabajos escolares personalizados. Excelencia, creatividad y perfección.',
+      'Diseños y trabajos escolares personalizados en Venezuela. Maquetas, láminas y proyectos con acabados profesionales.',
     type: 'website',
-    locale: 'es_ES',
-    url: 'https://ac-maquetas.vercel.app', // Fallback URL
+    locale: 'es_VE',
+    url: 'https://acmaquetas.lat',
+    siteName: 'AC Maquetas',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trabajos Escolares - Maquetas, Láminas y Más',
+    title: 'AC Maquetas | Maquetas y Trabajos Escolares',
     description:
-      'Diseños y trabajos escolares personalizados. Excelencia, creatividad y perfección.',
+      'Creatividad y perfección en cada proyecto escolar en Venezuela.',
   },
 }
 

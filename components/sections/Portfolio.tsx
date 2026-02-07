@@ -108,6 +108,7 @@ const Portfolio = () => {
               href={`https://instagram.com/${instagramAccount}`}
               target='_blank'
               rel='noopener noreferrer'
+              title='Ver nuestra galería completa de trabajos en Instagram'
             >
               <Instagram className='w-6 h-6 mr-3' />
               Ver más en Instagram

@@ -10,6 +10,7 @@ export function PencilDecoration({ className = '' }: { className?: string }) {
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
       animate={{
         y: [0, -10, 0],
         rotate: [160, 165, 160],
@@ -45,6 +46,7 @@ export function RulerDecoration({ className = '' }: { className?: string }) {
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
     >
       <rect
         x='5'
@@ -78,6 +80,7 @@ export function CompassDecoration({ className = '' }: { className?: string }) {
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
     >
       <circle cx='50' cy='50' r='3' fill='oklch(0.45 0.08 280)' />
       <path
@@ -110,6 +113,7 @@ export function NotebookDecoration({ className = '' }: { className?: string }) {
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
     >
       <rect
         x='15'
@@ -213,7 +217,7 @@ export function ACLogo({ className = '' }: { className?: string }) {
   return (
     <Image
       src='/ac-logo.svg'
-      alt='Logo'
+      alt='AC Maquetas Logo'
       width={100}
       height={100}
       className={className}

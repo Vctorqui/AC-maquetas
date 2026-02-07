@@ -104,4 +104,4 @@ Bloque de alto impacto con tipografía técnica y botones escalados que simulan 
 
 ## 👨‍💻 Autor
 
-Desarrollado por [Mi](https://github.com/Vctorqui) para elevar la presencia digital de **AC Maquetas**.
+Desarrollado por [Victor Quiñones](https://github.com/Vctorqui) para elevar la presencia digital de **AC Maquetas**.

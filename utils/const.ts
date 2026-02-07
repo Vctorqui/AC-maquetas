@@ -1,7 +1,7 @@
 import { CheckCircle, Clock, Award, Lightbulb } from 'lucide-react'
 
-export const whatsappNumber = '584164659381'
-export const instagramAccount = 'maquetas.pf'
+export const whatsappNumber = process.env.NEXT_PUBLIC_WS_NUMBER as string
+export const instagramAccount = process.env.NEXT_PUBLIC_IG_ACCOUNT as string
 
 export const features = [
   'Diseños personalizados',
@@ -34,7 +34,7 @@ export const whyChooseUs = [
   },
 ]
 
-export const process = [
+export const workProcess = [
   {
     step: '1',
     title: 'Contáctanos',

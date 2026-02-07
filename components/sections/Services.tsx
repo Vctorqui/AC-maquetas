@@ -34,6 +34,7 @@ const Services = () => {
             <div
               key={service.name}
               onClick={() => setSelectedService(service.name)}
+              title={`Ver galería de ejemplos de ${service.name}`}
               className='group relative bg-white border-4 border-primary p-8 pt-12 shadow-[8px_8px_0px_var(--primary-side)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[16px_16px_0px_var(--primary-side)] transition-all cursor-pointer'
             >
               {/* Box Lid Effect */}

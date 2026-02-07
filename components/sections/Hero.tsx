@@ -55,6 +55,7 @@ const HeroSection = () => {
                   href={`https://wa.me/${whatsappNumber}?text=Hola! Quiero solicitar información sobre sus trabajos escolares`}
                   target='_blank'
                   rel='noopener noreferrer'
+                  title='Solicitar información personalizada por WhatsApp'
                 >
                   <MessageCircle className='w-6 h-6' />
                   Solicitar Ahora

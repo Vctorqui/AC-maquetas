@@ -8,7 +8,7 @@ import {
   PencilRuler,
   Smartphone,
 } from '../shared/CustomIcons'
-import { process } from '@/utils/const'
+import { workProcess } from '@/utils/const'
 
 const HowWorks = () => {
   return (
@@ -38,7 +38,7 @@ const HowWorks = () => {
 
         {/* The "Bulletin Board" Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8'>
-          {process.map((item, index) => {
+          {workProcess.map((item, index) => {
             const rotations = ['-rotate-2', 'rotate-1', 'rotate-3', '-rotate-1']
             const rotation = rotations[index % rotations.length]
 
