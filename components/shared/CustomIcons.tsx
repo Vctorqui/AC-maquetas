@@ -216,7 +216,7 @@ export function WhatsAppDecoration({
 export function ACLogo({ className = '' }: { className?: string }) {
   return (
     <Image
-      src='/ac-logo.svg'
+      src='/logo-ac.webp'
       alt='AC Maquetas Logo'
       width={100}
       height={100}

@@ -5,6 +5,7 @@ import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
 import { Suspense } from 'react'
 import './globals.css'
+import BrandLoading from '@/components/shared/BrandLoading'
 
 export const metadata: Metadata = {
   title:
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     'Expertos en la creación de maquetas escolares, láminas educativas y proyectos estudiantiles en Venezuela. Creatividad, calidad y puntualidad para tus tareas escolares.',
   keywords: [
     'maquetas escolares venezuela',
-    'trabajos escolares caracas',
+    'trabajos escolares venezuela',
     'proyectos escolares personalizados',
     'láminas educativas',
     'trípticos escolares',
@@ -60,13 +61,7 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense
-          fallback={
-            <div className='min-h-screen flex items-center justify-center bg-background'>
-              Cargando...
-            </div>
-          }
-        >
+        <Suspense fallback={<BrandLoading />}>
           {children}
           <Analytics />
         </Suspense>
